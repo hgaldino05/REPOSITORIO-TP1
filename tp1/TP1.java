@@ -7,8 +7,8 @@ import java.util.ArrayList;
 /*==========TP1============
  * ALUNO: HENRIQUE GALDINO - 200058258
  * 
- * VERS√O INICIAL -> 7 de 7 opÁıes estruturadas e funcionais
- * 
+ * VERS√ÉO FINAL -> 7 de 7 op√ß√µes estruturadas e funcionais
+ * o TP1.java depende o Dados.java e Produtos.java para funcionar!!
  * */
 public class TP1 {
 	
@@ -60,7 +60,7 @@ public class TP1 {
 				case 7: sairMenu();
 						break;
 				default:
-						System.out.println("\n ERRO - ESCOLHA UMA OP«√O V¡LIDA \n");
+						System.out.println("\n ERRO - ESCOLHA UMA OP√á√ÉO V√ÅLIDA \n");
 						
 			}
 			
@@ -69,7 +69,7 @@ public class TP1 {
 	
 	//Menu
 	private void menu() {
-		System.out.println("Selecione a opÁ„o do menu a ser acessada:");
+		System.out.println("Selecione a op√ß√£o do menu a ser acessada:");
 		System.out.println("1 - Cadastro de novo cliente");
 		System.out.println("2 - Busca por cliente");
 		System.out.println("3 - Cadastro de novo produto");
@@ -99,10 +99,10 @@ public class TP1 {
 			System.out.println("Telefone do cliente: ");
 			d.telCliente(ler.nextLine());
 			
-			System.out.println("EndereÁo do cliente: ");
+			System.out.println("Endere√ßo do cliente: ");
 			d.endCliente(ler.nextLine());
 			
-			System.out.println("Confirmar cadastro (Sim/N„o) ?");
+			System.out.println("Confirmar cadastro (Sim/N√£o) ?");
 			String confirmar = ler.nextLine();
 			
 			if(confirmar.equalsIgnoreCase("Sim")) {
@@ -115,7 +115,7 @@ public class TP1 {
 					cadastrando = false;
 				}
 				
-			}else if (confirmar.equalsIgnoreCase("N„o")) {
+			}else if (confirmar.equalsIgnoreCase("N√£o")) {
 				System.out.println("Cadastro cancelado!");
 				cadastrando = false;
 			}else {
@@ -130,7 +130,7 @@ public class TP1 {
 		
 		
 		if (dadosCadastrar.size() == 0) {
-			System.out.println("\n Ainda n„o existem clientes cadastrados!\n");
+			System.out.println("\n Ainda n√£o existem clientes cadastrados!\n");
 		} else {
 			System.out.println("\n \tBUSCA DE CLIENTES CADASTRADOS\n \nINFORME O NOME DO CLIENTE A SER BUSCADO");
 			
@@ -145,9 +145,9 @@ public class TP1 {
 					
 					System.out.println("Nome: " + d.Nome());
 					System.out.println("Telefone: " + d.Telefone());
-					System.out.println("EndereÁo: " + d.Endereco() + "\n");
+					System.out.println("Endere√ßo: " + d.Endereco() + "\n");
 				
-					System.out.println("Deseja alterar os dados desse cliente? (Sim/N„o)");
+					System.out.println("Deseja alterar os dados desse cliente? (Sim/N√£o)");
 					String alterar = ler.nextLine();
 					
 					if(alterar.equalsIgnoreCase("Sim")) {
@@ -161,22 +161,22 @@ public class TP1 {
 						d.telCliente(d.Telefone().replaceAll(d.Telefone(), novoTel));
 						
 						
-						System.out.println("Informe o novo endereÁo do cliente: ");
+						System.out.println("Informe o novo endere√ßo do cliente: ");
 						novoEnd = ler.nextLine();
 						d.endCliente(d.Endereco().replaceFirst(d.Endereco(), novoEnd));
 					
 						
-						System.out.println("Esses s„o os novos dados do cliente: ");
-						System.out.println("Cliente n˙mero: " + i);
+						System.out.println("Esses s√£o os novos dados do cliente: ");
+						System.out.println("Cliente n√∫mero: " + i);
 						System.out.println("Nome: " + d.Nome());
 						System.out.println("Telefone: " + d.Telefone());
-						System.out.println("EndereÁo: " + d.Endereco() + "\n");
+						System.out.println("Endere√ßo: " + d.Endereco() + "\n");
 					}else {
 						System.out.println("RETORNANDO AO MENU PRINCIPAL");
 					}
 				}else if(!busca.equalsIgnoreCase(d.Nome())){
 					if(i == (dadosCadastrar.size()-1)) {
-					System.out.println("N„o h· clientes cadastrados com o nome informado!\n RETORNANDO AO MENU");
+					System.out.println("N√£o h√° clientes cadastrados com o nome informado!\n RETORNANDO AO MENU");
 					}
 				}
 			}
@@ -188,7 +188,7 @@ public class TP1 {
 		
 		
 		if (prodCadastrar.size() == 0) {
-			System.out.println("\n Ainda n„o existem produtos cadastrados!\n");
+			System.out.println("\n Ainda n√£o existem produtos cadastrados!\n");
 		} else {
 			System.out.println("\n~~BUSCA DE PRODUTOS CADASTRADOS~~\n INFORME O NOME DO PRODUTO A SER BUSCADO");
 			
@@ -202,14 +202,14 @@ public class TP1 {
 					String novoProd, novaDescricao;
 					Double novoValor, novoLucro, novoEstoque;
 					
-					System.out.println("Cliente n˙mero: " + i++);
+					System.out.println("Cliente n√∫mero: " + i++);
 					System.out.println("Nome: " + p.Produto());
-					System.out.println("DescriÁ„o: " + p.Descricao());
+					System.out.println("Descri√ß√£o: " + p.Descricao());
 					System.out.println("Valor por unidade: R$" + p.Valor() + "\n");
 					System.out.println("Porcentagem de lucro: " + p.Lucro() + "%\n");
 					System.out.println("Unidades em estoque: " + p.Estoque() + "\n");
 					
-					System.out.println("Deseja alterar os dados deste produto? (Sim/N„o)");
+					System.out.println("Deseja alterar os dados deste produto? (Sim/N√£o)");
 					String sair = ler.nextLine();
 					
 					if(sair.equalsIgnoreCase("Sim")) {
@@ -218,7 +218,7 @@ public class TP1 {
 						novoProd = ler.nextLine();
 						p.nomeProd(p.Produto().replaceAll(p.Produto(), novoProd));
 						
-						System.out.println("Informe a nova descriÁ„o do produto: ");
+						System.out.println("Informe a nova descri√ß√£o do produto: ");
 						novaDescricao = ler.nextLine();
 						p.prodDescricao(p.Descricao().replaceAll(p.Descricao(), novaDescricao));
 						
@@ -237,16 +237,16 @@ public class TP1 {
 						ler.nextLine();
 						p.produtoEstoque((p.Estoque()-p.Estoque()) + novoEstoque);
 						
-						System.out.println("Esses s„o os novos dados do produto: ");
+						System.out.println("Esses s√£o os novos dados do produto: ");
 						System.out.println("NOME: " + p.Produto());
-						System.out.println("DESCRI«√O: " + p.Descricao());
+						System.out.println("DESCRI√á√ÉO: " + p.Descricao());
 						System.out.println("VALOR: " + p.Valor());
 						System.out.println("PORCENTAGEM DE LUCRO: " + p.Lucro());
 						System.out.println("QUANTIDADE EM ESTOQUE: " + p.Estoque());
 					}
 				}else if(!busca.equalsIgnoreCase(p.Produto())){
 					if(i == (prodCadastrar.size() - 1)) {
-					System.out.println("N„o h· produtos cadastrados com o nome informado!\n RETORNANDO AO MENU");
+					System.out.println("N√£o h√° produtos cadastrados com o nome informado!\n RETORNANDO AO MENU");
 					}
 				}
 			}
@@ -270,7 +270,7 @@ public class TP1 {
 			System.out.println("Nome do produto: ");
 			p.nomeProd(ler.nextLine());
 			
-			System.out.println("DescriÁ„o do produto: ");
+			System.out.println("Descri√ß√£o do produto: ");
 			p.prodDescricao(ler.nextLine());
 			
 			System.out.println("Valor do produto (por unidade): ");
@@ -281,11 +281,11 @@ public class TP1 {
 			p.vendaLucro(ler.nextDouble());
 			ler.nextLine();
 			
-			System.out.println("Unidades do produto disponÌveis em estoque: ");
+			System.out.println("Unidades do produto dispon√≠veis em estoque: ");
 			p.produtoEstoque(ler.nextDouble());
 			ler.nextLine();
 			
-			System.out.println("Confirmar cadastro (Sim/N„o) ?");
+			System.out.println("Confirmar cadastro (Sim/N√£o) ?");
 			String confirmar = ler.nextLine();
 			
 			if(confirmar.equalsIgnoreCase("Sim")) {
@@ -298,7 +298,7 @@ public class TP1 {
 					cadastrando = false;
 				}
 				
-			}else if (confirmar.equalsIgnoreCase("N„o")) {
+			}else if (confirmar.equalsIgnoreCase("N√£o")) {
 				System.out.println("Cadastro cancelado!");
 				cadastrando = false;
 			}else {
@@ -314,14 +314,14 @@ public class TP1 {
 		//String produtoVendido;
 		
 		if (dadosCadastrar.size() == 0) {
-			System.out.println("\nN„o existem clientes cadastrados!\n");
+			System.out.println("\nN√£o existem clientes cadastrados!\n");
 		}else if (prodCadastrar.size() == 0) {
-				System.out.println("\nN„o existem produtos cadastrados!\n");
+				System.out.println("\nN√£o existem produtos cadastrados!\n");
 		}else {
 				System.out.println("\nLista de Cadastros\n");
 				for (int i = 0; i < dadosCadastrar.size(); i++) {
 					Dados d = dadosCadastrar.get(i);
-					System.out.println("Cadastro n˙mero: " + i);
+					System.out.println("Cadastro n√∫mero: " + i);
 					System.out.println("Nome: " + d.Nome());
 				
 				}
@@ -345,7 +345,7 @@ public class TP1 {
 					
 						Produtos p = prodCadastrar.get(i);
 					
-						System.out.println("Produto n˙mero: " + (i));
+						System.out.println("Produto n√∫mero: " + (i));
 						System.out.println("Nome: " + p.Produto());
 						System.out.println("Unidades em estoque: " + p.Estoque());
 						
@@ -368,12 +368,12 @@ public class TP1 {
 								System.out.println("Venda registrada com sucesso!!");
 								System.out.println("Nova quantidade do produto em estoque: " + p.Estoque());
 								
-								System.out.println("Deseja registrar outra compra em nome do cliente? (Sim/N„o)");
+								System.out.println("Deseja registrar outra compra em nome do cliente? (Sim/N√£o)");
 								String sair  = ler.nextLine();
 								
 								if(sair.equalsIgnoreCase("sim")) {
 									
-								}else if(sair.equalsIgnoreCase("n„o")) {
+								}else if(sair.equalsIgnoreCase("n√£o")) {
 									System.out.println("RETORNANDO AO MENU...");
 									listando = false;									
 								}
@@ -390,14 +390,14 @@ public class TP1 {
 	private void listarProdutos() {
 		
 		if(prodCadastrar.size() == 0) {
-			System.out.println("N„o h· produtos cadastrados no sistema");
+			System.out.println("N√£o h√° produtos cadastrados no sistema");
 		}else {
-			System.out.println("PRODUTOS DISPONÕVEIS EM ESTOQUE");
+			System.out.println("PRODUTOS DISPON√çVEIS EM ESTOQUE");
 			for (int i = 0; i < prodCadastrar.size(); i++) {
 			
 				Produtos p = prodCadastrar.get(i);
 				
-				System.out.println("PRODUTO N⁄MERO " + i + ": " + p.Produto());
+				System.out.println("PRODUTO N√öMERO " + i + ": " + p.Produto());
 				System.out.println("QUANTIDADE: " + p.Estoque() + "\n");
 			
 			}
@@ -410,7 +410,7 @@ public class TP1 {
 		executar = false;
 	}
 	
-	//10 clientes e vendas prÈ cadastrados
+	//10 clientes e vendas pr√© cadastrados
 	private void preCadastros(){
 		for(int i = 0; i < 10; i++) {
 		Dados d = new Dados();
@@ -423,7 +423,7 @@ public class TP1 {
 		d.telCliente("44 (0)20 3862 3352");
 		
 		p.nomeProd("Celular 32gb");
-		p.prodDescricao("Celular com 32gb de memÛria");
+		p.prodDescricao("Celular com 32gb de mem√≥ria");
 		p.prodValor(1299.99);
 		p.vendaLucro(68.9);
 		p.produtoEstoque(5.0);
@@ -446,11 +446,11 @@ public class TP1 {
 		//CLIENTE & PRODUTO COM INDICE 2
 		if(i == 2) {
 		d.nomeCliente("Chris Sawyer");
-		d.endCliente("Dundee, EscÛcia");
+		d.endCliente("Dundee, Esc√≥cia");
 		d.telCliente("22031999");
 
-		p.nomeProd("Amaciante Cheiro B„o");
-		p.prodDescricao("Amaciante 5 litros da marca Cheiro B„o");
+		p.nomeProd("Amaciante Cheiro B√£o");
+		p.prodDescricao("Amaciante 5 litros da marca Cheiro B√£o");
 		p.prodValor(13.99);
 		p.vendaLucro(52.15);
 		p.produtoEstoque(46.0);
@@ -462,8 +462,8 @@ public class TP1 {
 		d.endCliente("Rua 48, Lote 10, Casa 15");
 		d.telCliente("61 91234 5678");
 
-		p.nomeProd("Arroz Sabor B„o");
-		p.prodDescricao("Pacote de arroz com 5kg, da marca Sabor B„o");
+		p.nomeProd("Arroz Sabor B√£o");
+		p.prodDescricao("Pacote de arroz com 5kg, da marca Sabor B√£o");
 		p.prodValor(16.99);
 		p.vendaLucro(67.0);
 		p.produtoEstoque(25.0);
@@ -472,7 +472,7 @@ public class TP1 {
 		//CLIENTE & PRODUTO COM INDICE 4
 		if(i == 4) {
 		d.nomeCliente("Wilson Arantes");
-		d.endCliente("Ch·cara 121 Rua 10A Lotes 22/28, St. Hab. Vicente Pires");
+		d.endCliente("Ch√°cara 121 Rua 10A Lotes 22/28, St. Hab. Vicente Pires");
 		d.telCliente("98317-2693");
 
 		p.nomeProd("Camisa Flamengo 20/21");
@@ -485,11 +485,11 @@ public class TP1 {
 		//CLIENTE & PRODUTO COM INDICE 5
 		if(i == 5) {
 		d.nomeCliente("Shigeru Miyamoto");
-		d.endCliente("TÛquio, Jap„o");
+		d.endCliente("T√≥quio, Jap√£o");
 		d.telCliente("81 3-3440-6911");
 
 		p.nomeProd("Console Nintendo Switch 32gb");
-		p.prodDescricao("Console Nintendo Switch com 32gb de memÛria");
+		p.prodDescricao("Console Nintendo Switch com 32gb de mem√≥ria");
 		p.prodValor(2499.99);
 		p.vendaLucro(84.3);
 		p.produtoEstoque(12.0);
@@ -498,11 +498,11 @@ public class TP1 {
 		//CLIENTE & PRODUTO COM INDICE 6
 		if(i == 6) {
 		d.nomeCliente("Luiza Vieira");
-		d.endCliente("Terceira Avenida, Bloco 1420, Lote 1520A - N˙cleo Bandeirante, BrasÌlia");
+		d.endCliente("Terceira Avenida, Bloco 1420, Lote 1520A - N√∫cleo Bandeirante, Bras√≠lia");
 		d.telCliente("(61) 3041-8584");
 
-		p.nomeProd("M·quina de lavar 9kg");
-		p.prodDescricao("M·quina de lavar com capacidade 9kg");
+		p.nomeProd("M√°quina de lavar 9kg");
+		p.prodDescricao("M√°quina de lavar com capacidade 9kg");
 		p.prodValor(1078.99);
 		p.vendaLucro(67.2);
 		p.produtoEstoque(5.0);
@@ -514,34 +514,34 @@ public class TP1 {
 		d.endCliente("50 RAFFLES PL, 048623, Singapura");
 		d.telCliente("2191-6565");
 
-		p.nomeProd("Cart„o prÈ-pago Netflix 3 meses");
-		p.prodDescricao("Cart„o com cÛdigo para 3 meses de assinatura Netflix");
+		p.nomeProd("Cart√£o pr√©-pago Netflix 3 meses");
+		p.prodDescricao("Cart√£o com c√≥digo para 3 meses de assinatura Netflix");
 		p.prodValor(65.99);
 		p.vendaLucro(30.0);
 		p.produtoEstoque(109.0);
 		}
 		
-		//PrÈ cadastro 9
+		//Pr√© cadastro 9
 		if(i == 8) {
 		d.nomeCliente("Henrique Galdino");
 		d.endCliente("Rua Logo Ali, Lote 0, Casa 0");
 		d.telCliente("44 (0)20 3862 3352");
 
 		p.nomeProd("Slam Dunk Vol. 09");
-		p.prodDescricao("Volume 09 do mang· Slam Dunk, com 232 p·ginas");
+		p.prodDescricao("Volume 09 do mang√° Slam Dunk, com 232 p√°ginas");
 		p.prodValor(17.99);
 		p.vendaLucro(89.61);
 		p.produtoEstoque(30.0);
 		}
 		
-		//PrÈ cadastro 10
+		//Pr√© cadastro 10
 		if(i == 9) {
 		d.nomeCliente("Fulano da Silva");
-		d.endCliente("UnB - BrasÌlia, DF");
+		d.endCliente("UnB - Bras√≠lia, DF");
 		d.telCliente("61 4002-8922");
 		
 		p.nomeProd("Notebook 8gb RAM  1Tb");
-		p.prodDescricao("Notebook com 8gb de memÛria ram e HD de 1tb");
+		p.prodDescricao("Notebook com 8gb de mem√≥ria ram e HD de 1tb");
 		p.prodValor(3442.99);
 		p.vendaLucro(111.0);
 		p.produtoEstoque(2.0);
